@@ -1,14 +1,41 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# Virtualenv setup
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
 
+export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:/Users/hndr/Tools/adt-bundle/sdk/platform-tools:/usr/local/mysql/bin:/usr/local/php5/bin:/usr/local/go/bin:$PATH
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+alias lsa='ls -lah'
+alias ll='ls -l'
+alias la='ls -lA'
+alias sl=ls # often screw this up
+
+alias arts="php artisan"
+
+alias gst="git status"
+alias gl="git pull"
+alias gcm="git commit -m"
+alias gam="git commit -am"
+alias gd="git diff"
+alias gs="git status"
+
+alias ydl="youtube-dl"
+alias resetdns="dscacheutil -flushcache"
+
+export CHEATPATH=~/.cheat
+export CHEATCOLORS=true
+
+# Weird python on OS X fix
+export LC_ALL=en_US.UTF-8
+
+# Git ignore generator
+function gi() { curl http://www.gitignore.io/api/$@ ;}
+
+bindkey -e
