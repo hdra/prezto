@@ -28,6 +28,7 @@ alias gs="git status"
 
 alias ydl="youtube-dl"
 alias resetdns="dscacheutil -flushcache"
+alias epoch="date +%s"
 
 export CHEATPATH=~/.cheat
 export CHEATCOLORS=true
