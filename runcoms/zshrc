@@ -19,6 +19,7 @@ alias sl=ls # often screw this up
 
 alias arts="php artisan"
 
+alias gaa="git add -A"
 alias gst="git status"
 alias gl="git pull"
 alias gcm="git commit -m"
