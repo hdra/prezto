@@ -28,6 +28,7 @@ zstyle -s ':prezto:module:git:status:ignore' submodules '_git_status_ignore_subm
 
 # Git
 alias g='git'
+alias gaa='git add -A'
 
 # Branch (b)
 alias gb='git branch'
@@ -123,60 +124,4 @@ alias gpA='git push --all && git push --tags'
 alias gpt='git push --tags'
 alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
 alias gpp='git pull origin "$(git-branch-current 2> /dev/null)" && git push origin "$(git-branch-current 2> /dev/null)"'
-
-# Rebase (r)
-alias gr='git rebase'
-alias gra='git rebase --abort'
-alias grc='git rebase --continue'
-alias gri='git rebase --interactive'
-alias grs='git rebase --skip'
-
-# Remote (R)
-alias gR='git remote'
-alias gRl='git remote --verbose'
-alias gRa='git remote add'
-alias gRx='git remote rm'
-alias gRm='git remote rename'
-alias gRu='git remote update'
-alias gRp='git remote prune'
-alias gRs='git remote show'
-alias gRb='git-hub-browse'
-
-# Stash (s)
-alias gs='git stash'
-alias gsa='git stash apply'
-alias gsx='git stash drop'
-alias gsX='git-stash-clear-interactive'
-alias gsl='git stash list'
-alias gsL='git-stash-dropped'
-alias gsd='git stash show --patch --stat'
-alias gsp='git stash pop'
-alias gsr='git-stash-recover'
-alias gss='git stash save --include-untracked'
-alias gsS='git stash save --patch --no-keep-index'
-alias gsw='git stash save --include-untracked --keep-index'
-
-# Submodule (S)
-alias gS='git submodule'
-alias gSa='git submodule add'
-alias gSf='git submodule foreach'
-alias gSi='git submodule init'
-alias gSI='git submodule update --init --recursive'
-alias gSl='git submodule status'
-alias gSm='git-submodule-move'
-alias gSs='git submodule sync'
-alias gSu='git submodule foreach git pull origin master'
-alias gSx='git-submodule-remove'
-
-# Working Copy (w)
-alias gws='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
-alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules}'
-alias gwd='git diff --no-ext-diff'
-alias gwD='git diff --no-ext-diff --word-diff'
-alias gwr='git reset --soft'
-alias gwR='git reset --hard'
-alias gwc='git clean -n'
-alias gwC='git clean -f'
-alias gwx='git rm -r'
-alias gwX='git rm -rf'
 
