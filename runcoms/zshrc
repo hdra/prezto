@@ -18,6 +18,7 @@ alias la='ls -lA'
 alias sl=ls # often screw this up
 
 alias arts="php artisan"
+alias cda="composer dumpautoload"
 
 alias gaa="git add -A"
 alias gst="git status"
