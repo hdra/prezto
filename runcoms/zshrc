@@ -12,6 +12,10 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:/Users/hndr/Tools/adt-bundle/sdk/platform-tools:/usr/local/mysql/bin:/usr/local/php5/bin:/usr/local/go/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+export GIT_AUTHOR=Hendra
+
+alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
+
 alias lsa='ls -lah'
 alias ll='ls -l'
 alias la='ls -lA'
