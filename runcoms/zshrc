@@ -9,9 +9,13 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
+# chruby setup
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+# enable chruby autoswitching
+source /usr/local/opt/chruby/share/chruby/auto.sh
+
 export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:/Users/hndr/Tools/adt-bundle/sdk/platform-tools:/usr/local/mysql/bin:/usr/local/php5/bin:/usr/local/go/bin:$PATH
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/gocode/bin
 
 export GIT_AUTHOR=Hendra
