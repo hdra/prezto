@@ -18,7 +18,7 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 export PATH=$HOME/.bin:$PATH
 export PATH=$PATH:$HOME/.composer/vendor/bin:/usr/local/php5/bin
 export PATH=$PATH:/usr/local/go/bin:$HOME/gocode/bin
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin::/usr/local/mysql/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/local/mysql/bin
 
 export GIT_AUTHOR=Hendra
 export HISTSIZE=1000
