@@ -14,13 +14,18 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 # enable chruby autoswitching
 source /usr/local/opt/chruby/share/chruby/auto.sh
 # set default ruby
-chruby ruby-2.1.3
+chruby 2.2.2
+
 
 # First place too look for path
 export PATH=$HOME/.bin:$PATH
 export PATH=$PATH:$HOME/.composer/vendor/bin:/usr/local/php5/bin
-export PATH=$PATH:/usr/local/go/bin:$HOME/gocode/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/local/mysql/bin
+
+
+#Mysql libs path
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 export GIT_AUTHOR=Hendra
 export HISTSIZE=1000
