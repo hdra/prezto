@@ -53,6 +53,8 @@ alias resetdns="dscacheutil -flushcache"
 alias epoch="date +%s"
 alias httpHere="python -m SimpleHTTPServer"
 
+alias tmx="tmux"
+
 export CHEATPATH=~/.cheat
 export CHEATCOLORS=true
 
