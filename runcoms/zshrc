@@ -28,7 +28,7 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/loca
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 export GIT_AUTHOR=Hendra
-export HISTSIZE=1000
+export HISTSIZE=100000
 
 alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
 
@@ -48,7 +48,7 @@ alias gam="git commit -am"
 alias gd="git diff"
 alias gs="git status"
 
-alias ydl="youtube-dl"
+alias ydl="noglob youtube-dl"
 alias resetdns="dscacheutil -flushcache"
 alias epoch="date +%s"
 alias httpHere="python -m SimpleHTTPServer"
