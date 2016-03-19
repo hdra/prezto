@@ -30,8 +30,6 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 export GIT_AUTHOR=Hendra
 export HISTSIZE=100000
 
-alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
-
 alias lsa='ls -lah'
 alias ll='ls -l'
 alias la='ls -lA'
@@ -57,8 +55,9 @@ alias vim="nvim"
 alias tmx="tmux"
 alias runs="reattach-to-user-namespace"
 
-export CHEATPATH=~/.cheat
-export CHEATCOLORS=true
+# Works shortcuts
+alias ac-status="ssh ac-prod-1 'sudo supervisorctl status'"
+alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
 
 # Weird python on OS X fix
 export LC_ALL=en_US.UTF-8
