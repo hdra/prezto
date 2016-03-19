@@ -30,11 +30,6 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 export GIT_AUTHOR=Hendra
 export HISTSIZE=100000
 
-alias lsa='ls -lah'
-alias ll='ls -l'
-alias la='ls -lA'
-alias sl=ls # often screw this up
-
 alias arts="php artisan"
 alias cda="composer dumpautoload"
 
