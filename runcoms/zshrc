@@ -32,6 +32,7 @@ export HISTSIZE=100000
 
 alias arts="php artisan"
 alias cda="composer dumpautoload"
+alias pymanage="python manage.py"
 
 alias gaa="git add -A"
 alias gst="git status"
