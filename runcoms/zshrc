@@ -23,11 +23,11 @@ export PATH=$PATH:$HOME/.composer/vendor/bin:/usr/local/php5/bin
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/local/mysql/bin
 
-
 #Mysql libs path
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 export GIT_AUTHOR=Hendra
+export TAG=`date +DEPLOYED-%F/%H%M`
 export HISTSIZE=100000
 
 alias arts="php artisan"
@@ -47,6 +47,7 @@ alias resetdns="dscacheutil -flushcache"
 alias epoch="date +%s"
 alias httpHere="python -m SimpleHTTPServer"
 
+alias vi="vim"
 alias vim="nvim"
 alias tmx="tmux"
 alias runs="reattach-to-user-namespace"
