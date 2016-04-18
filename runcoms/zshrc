@@ -1,3 +1,10 @@
+# .zshrc is for interactive shell configuration.
+# You set options for the interactive shell there with the setopt and
+# unsetopt commands. You can also load shell modules, set your history options,
+# change your prompt, set up zle and completion, et cetera.
+# You also set any variables that are only used in the interactive shell
+
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -7,7 +14,7 @@ fi
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 # chruby setup
 source /usr/local/opt/chruby/share/chruby/chruby.sh
@@ -16,17 +23,6 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 # set default ruby
 chruby 2.2.2
 
-
-# First place too look for path
-export PATH=$HOME/.bin:$PATH
-export PATH=$PATH:$HOME/.composer/vendor/bin:/usr/local/php5/bin
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/local/mysql/bin
-
-#Mysql libs path
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-
-export GIT_AUTHOR=Hendra
 export TAG=`date +DEPLOYED-%F/%H%M`
 export HISTSIZE=100000
 

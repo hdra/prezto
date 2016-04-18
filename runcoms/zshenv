@@ -4,8 +4,33 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+# Since .zshenv is always sourced, it often contains exported variables
+# that should be available to other programs.
+# For example, $PATH, $EDITOR, and $PAGER are often set in .zshenv.
+
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+#Golang
+export GOPATH=$HOME/GoCode
+
+# First place too look for path
+export PATH=$HOME/.bin:$PATH
+export PATH=$PATH:$HOME/.composer/vendor/bin:/usr/local/php5/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/local/mysql/bin
+
+# Git
+export GIT_AUTHOR=Hendra
+
+# Editors
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+
+#Mysql libs path
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
