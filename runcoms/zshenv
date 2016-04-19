@@ -14,6 +14,9 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# Weird python on OS X fix
+export LC_ALL=en_US.UTF-8
+
 #Golang
 export GOPATH=$HOME/GoCode
 

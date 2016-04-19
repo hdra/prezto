@@ -52,9 +52,6 @@ alias runs="reattach-to-user-namespace"
 alias ac-status="ssh ac-prod-1 'sudo supervisorctl status'"
 alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
 
-# Weird python on OS X fix
-export LC_ALL=en_US.UTF-8
-
 # Git ignore generator
 function gi() { curl http://www.gitignore.io/api/$@ ;}
 
