@@ -10,7 +10,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Virtualenv setup
+# virtualenvwrapper setup
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
@@ -37,6 +37,7 @@ alias gcm="git commit -m"
 alias gam="git commit -am"
 alias gd="git diff"
 alias gs="git status"
+unalias gb
 
 alias ydl="noglob youtube-dl"
 alias resetdns="dscacheutil -flushcache"
@@ -53,6 +54,12 @@ alias ac-status="ssh ac-prod-1 'sudo supervisorctl status'"
 alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
 
 # Git ignore generator
-function gi() { curl http://www.gitignore.io/api/$@ ;}
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 bindkey -e
+
+# Automatically activate venv a `venv` directory is present on the current dir.
+# Mostly used for tmux windows
+if [ -d "venv" ] ; then
+    source venv/bin/activate
+fi
