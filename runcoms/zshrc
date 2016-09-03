@@ -29,6 +29,9 @@ export HISTSIZE=100000
 alias arts="php artisan"
 alias cda="composer dumpautoload"
 alias pymanage="python manage.py"
+daynote(){
+ vim $(date +%Y-%m-%d).md
+}
 
 alias gaa="git add -A"
 alias gst="git status"
