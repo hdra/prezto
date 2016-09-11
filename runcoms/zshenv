@@ -29,6 +29,9 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/loca
 # Git
 export GIT_AUTHOR=Hendra
 
+# Android SDK
+export ANDROID_HOME=$HOME/Library/Android/sdk
+
 # Editors
 export EDITOR='vim'
 export VISUAL='vim'
