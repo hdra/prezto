@@ -10,18 +10,22 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# virtualenvwrapper setup
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+if [ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]; then
+    # virtualenvwrapper setup
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+    export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/local/bin/virtualenvwrapper_lazy.sh
+fi
 
 # chruby setup
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-# enable chruby autoswitching
-source /usr/local/opt/chruby/share/chruby/auto.sh
-# set default ruby
-chruby 2.2.2
+if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
+    source /usr/local/opt/chruby/share/chruby/chruby.sh
+    # enable chruby autoswitching
+    source /usr/local/opt/chruby/share/chruby/auto.sh
+    # set default ruby
+    chruby 2.2.2
+fi
 
 export TAG=`date +DEPLOYED-%F/%H%M`
 export HISTSIZE=100000
