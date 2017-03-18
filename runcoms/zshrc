@@ -73,5 +73,3 @@ bindkey -e
 if [ -d "venv" ] ; then
     source venv/bin/activate
 fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
