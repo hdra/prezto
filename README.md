@@ -38,11 +38,7 @@ version is 4.3.17.
 
   2. Clone the repository:
 
-<<<<<<< HEAD
         git clone --recursive git@github.com:hdra/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-=======
-        git clone --recursive https://github.com/zsh-users/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
->>>>>>> 037c781a1600b7dc8d6cb3e10e7a75d3c79c3853
 
   3. Create a new Zsh configuration by copying the Zsh configuration files
      provided:
