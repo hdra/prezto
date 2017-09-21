@@ -12,7 +12,7 @@ fi
 
 if [ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]; then
     # virtualenvwrapper setup
-    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
     export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
     export WORKON_HOME=$HOME/.virtualenvs
     source /usr/local/bin/virtualenvwrapper_lazy.sh
@@ -73,3 +73,7 @@ bindkey -e
 if [ -d "venv" ] ; then
     source venv/bin/activate
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
