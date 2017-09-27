@@ -21,7 +21,9 @@ export LC_ALL=en_US.UTF-8
 export GOPATH=$HOME/GoCode
 
 # First place too look for path
+export PATH=$HOME/.npm-global/bin:$PATH
 export PATH=$HOME/.bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export PATH=$PATH:$HOME/.composer/vendor/bin:/usr/local/php5/bin
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/local/mysql/bin
@@ -39,4 +41,7 @@ export PAGER='less'
 
 #Mysql libs path
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
+#IEX Shell history
+export ERL_AFLAGS="-kernel shell_history enabled"
 
