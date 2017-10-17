@@ -74,4 +74,8 @@ if [ -d "venv" ] ; then
     source venv/bin/activate
 fi
 
+#FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#Kiex
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
